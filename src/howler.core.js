@@ -453,6 +453,7 @@
      * @return {Howler}
      */
     _autoSuspend: function() {
+      console.warn("_autoSuspend");
       var self = this;
 
       if (!self.autoSuspend || !self.ctx || typeof self.ctx.suspend === 'undefined' || !Howler.usingWebAudio) {
@@ -485,6 +486,7 @@
 
         // Handle updating the state of the audio context after suspending.
         var handleSuspension = function() {
+          console.warn("handleSuspension");
           self.state = 'suspended';
 
           if (self._resumeAfterSuspend) {
