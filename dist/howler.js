@@ -496,7 +496,7 @@
         // Either the state gets suspended or it is interrupted.
         // Either way, we need to update the state to suspended.
         self.ctx.suspend().then(handleSuspension, handleSuspension);
-      }, 30000);
+      }, 3000);
 
       return self;
     },
